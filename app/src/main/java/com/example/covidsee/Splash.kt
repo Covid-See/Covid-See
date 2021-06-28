@@ -13,7 +13,7 @@ import com.sarnava.textwriter.TextWriter
 @Suppress("DEPRECATION")
 class Splash : AppCompatActivity() {
 
-    val binding by lazy { ActivitySplashBinding.inflate(layoutInflater) }
+    private val binding by lazy { ActivitySplashBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
