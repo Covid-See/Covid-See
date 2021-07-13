@@ -7,5 +7,5 @@
     <item
         android:id="@+id/gwangjuRegionMenuFragment"
         android:icon="@android:drawable/ic_menu_gallery"
-        android:title="광주 지역" />
+        android:title="선택 지역" />
 </menu>
