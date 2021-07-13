@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16sp"
+        android:fontFamily="@font/blackhansans_regular"
+        android:text="광주"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/text_new_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="신규확진자 수 : 13명"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_confirm_case"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="확진자 수 : 13명"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_recovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="완치자 수 : 13명"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_died"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="사망자 수 : 13명"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="발생률 : 13명"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_overseas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="전일대비증감 - 해외유입 : 13명"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12sp"
+        android:fontFamily="@font/hangeu_regular"
+        android:text="전일대비증감 - 지역발생 : 13명"
+        android:textSize="25sp" />
+</LinearLayout>

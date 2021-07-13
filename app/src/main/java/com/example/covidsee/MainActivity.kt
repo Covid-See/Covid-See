@@ -25,16 +25,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        navigationController()
-        getCovidApi()
+        supportActionBar?.hide()
+        this.navigationController()
+        this.getCovidApi()
     }
 
     private fun navigationController() {
 
         val navView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
-
         val navController = findNavController(R.id.container_fragment)
-
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.allRegionsMenuFragment, R.id.gwangjuRegionMenuFragment
