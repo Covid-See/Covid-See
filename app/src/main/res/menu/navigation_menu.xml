@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/allRegionsMenuFragment"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="전체 지역" />
+    <item
+        android:id="@+id/gwangjuRegionMenuFragment"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="광주 지역" />
+</menu>

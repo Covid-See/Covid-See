@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimg"
+    tools:context=".fragments.GwangjuRegionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30sp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ArrowImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5sp"
+                app:srcCompat="@drawable/arrow" />
+
+            <TextView
+                android:id="@+id/mainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="광주 코로나 현황"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/covidConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="25sp"
+            android:layout_marginBottom="30sp"
+            android:text="코로나 확진"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/Cumulative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="25sp"
+            android:layout_marginBottom="30sp"
+            android:text="누적 코로나 확진"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/Death"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="25sp"
+            android:text="사망자"
+            android:layout_marginBottom="30sp"
+            android:textSize="24sp"
+
+            />
+
+        <TextView
+            android:id="@+id/covidComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="25sp"
+            android:text="완치자"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
