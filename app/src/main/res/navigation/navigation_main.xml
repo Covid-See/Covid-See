@@ -7,10 +7,10 @@
 
     <fragment
         android:id="@+id/allRegionsMenuFragment"
-        android:name="com.example.covidsee.fragments.AllRegionsFragment"
+        android:name="com.example.covidsee.fragment.AllRegionsFragment"
         tools:layout="@layout/fragment_all_regions" />
     <fragment
         android:id="@+id/gwangjuRegionMenuFragment"
-        android:name="com.example.covidsee.fragments.GwangjuRegionFragment"
+        android:name="com.example.covidsee.fragment.GwangjuRegionFragment"
         tools:layout="@layout/fragment_gwangju_region" />
 </navigation>

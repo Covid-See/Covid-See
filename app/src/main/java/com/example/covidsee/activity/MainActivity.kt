@@ -1,4 +1,4 @@
-package com.example.covidsee
+package com.example.covidsee.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,12 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.covidsee.*
+import com.example.covidsee.adapter.CovidViewAdapter
+import com.example.covidsee.network.CovidApi
+import com.example.covidsee.network.CovidService
+import com.example.covidsee.network.CovidVO
+import com.example.covidsee.network.RegionVO
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
 import retrofit2.Callback

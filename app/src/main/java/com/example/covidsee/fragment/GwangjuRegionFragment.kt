@@ -1,4 +1,4 @@
-package com.example.covidsee.fragments
+package com.example.covidsee.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

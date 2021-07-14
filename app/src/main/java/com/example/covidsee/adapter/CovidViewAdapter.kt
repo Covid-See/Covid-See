@@ -1,13 +1,17 @@
-package com.example.covidsee
+package com.example.covidsee.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.covidsee.network.CovidVO
+import com.example.covidsee.R
 
 class CovidViewAdapter(var covidList: MutableList<CovidVO>) :
     RecyclerView.Adapter<CovidViewAdapter.CovidHolder?>() {
+
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CovidHolder {
         val view: View = LayoutInflater
@@ -28,8 +32,6 @@ class CovidViewAdapter(var covidList: MutableList<CovidVO>) :
         holder.textPercent.text = "발생률 : ${covidList[position]?.percentage}%" ?: "null"
         holder.textOverseas.text = "전일대비증감-해외유입 : ${covidList[position]?.newFCase}" ?: "null"
         holder.textArea.text = "전일대비증감-지역발생 : ${covidList[position]?.newCCase}" ?: "null"
-
-
     }
 
     class CovidHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
