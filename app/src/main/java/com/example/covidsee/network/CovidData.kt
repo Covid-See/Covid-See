@@ -1,4 +1,4 @@
-package com.example.covidsee
+package com.example.covidsee.network
 
 import com.google.gson.annotations.SerializedName
 
