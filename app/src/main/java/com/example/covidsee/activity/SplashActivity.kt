@@ -1,4 +1,4 @@
-package com.example.covidsee
+package com.example.covidsee.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import android.view.animation.AnimationUtils
+import com.example.covidsee.R
 import com.example.covidsee.databinding.ActivitySplashBinding
 import com.sarnava.textwriter.TextWriter
 
 
 @Suppress("DEPRECATION")
-class Splash : AppCompatActivity() {
+class SplashActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivitySplashBinding.inflate(layoutInflater) }
 
@@ -39,7 +40,7 @@ class Splash : AppCompatActivity() {
             .setLetterSpacing(25f)
             .setText("COVID SEE")
             .setListener(TextWriter.Listener {
-                binding.cvSeeImage.startAnimation(AnimationUtils.loadAnimation(this,R.anim.pop))
+                binding.cvSeeImage.startAnimation(AnimationUtils.loadAnimation(this, R.anim.pop))
                 Handler().postDelayed({
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)

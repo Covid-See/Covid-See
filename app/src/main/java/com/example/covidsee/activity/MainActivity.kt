@@ -1,4 +1,4 @@
-package com.example.covidsee
+package com.example.covidsee.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +9,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.covidsee.*
+import com.example.covidsee.databinding.FragmentAllRegionsBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
 import retrofit2.Callback
@@ -18,16 +20,27 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var covidViewAdapter: CovidViewAdapter
-    private lateinit var covidList: MutableList<CovidVO>
+    private var covidList = mutableListOf<CovidVO>()
+    private val covidViewAdapter  : CovidViewAdapter by lazy{CovidViewAdapter(covidList)}
+
+    private val binding by lazy { FragmentAllRegionsBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         supportActionBar?.hide()
-        this.navigationController()
-        this.getCovidApi()
+        navigationController()
+        getCovidApi()
+        setAdapter()
+    }
+
+    private fun setAdapter() {
+        val recyclerView: RecyclerView = binding.recyclerList
+        recyclerView.adapter = covidViewAdapter
+
+        val layoutManager = LinearLayoutManager(baseContext)
+        recyclerView.layoutManager = layoutManager
     }
 
     private fun navigationController() {
@@ -43,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    fun getCovidApi() {
+    private fun getCovidApi() {
         val retrofit = Retrofit.Builder()
             .baseUrl(CovidApi.DOMAIN)
             .addConverterFactory(GsonConverterFactory.create())
@@ -82,14 +95,6 @@ class MainActivity : AppCompatActivity() {
                             response.body()!!.jeju,
                             response.body()!!.quarantine
                         ) ?: mutableListOf()
-
-                        covidViewAdapter = CovidViewAdapter(covidList)
-
-                        val recyclerView: RecyclerView = findViewById(R.id.recycler_list)
-                        recyclerView.adapter = covidViewAdapter
-
-                        val layoutManager = LinearLayoutManager(baseContext)
-                        recyclerView.layoutManager = layoutManager
                     }
                 }
             })

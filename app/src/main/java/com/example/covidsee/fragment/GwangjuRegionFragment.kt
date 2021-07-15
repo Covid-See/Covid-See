@@ -1,4 +1,4 @@
-package com.example.covidsee.fragments
+package com.example.covidsee.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.covidsee.R
 
-class AllRegionsFragment : Fragment() {
+class GwangjuRegionFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onCreateView(
@@ -19,6 +18,7 @@ class AllRegionsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_all_regions, container, false)
+        return inflater.inflate(R.layout.fragment_gwangju_region, container, false)
     }
+
 }

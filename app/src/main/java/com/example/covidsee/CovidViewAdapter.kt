@@ -23,7 +23,7 @@ class CovidViewAdapter(var covidList: MutableList<CovidVO>) :
         holder.textCountry.text = covidList[position]?.countryName ?: "null"
         holder.textNewConfirm.text = "신규확진자 수 : ${covidList[position]?.newCase}" ?: "null"
         holder.textConfirmCase.text = "확진자 수 : ${covidList[position]?.totalCase}" ?: "null"
-        holder.textRecovered.text = "왼치자 수 : ${covidList[position]?.recovered}" ?: "null"
+        holder.textRecovered.text = "완치자 수 : ${covidList[position]?.recovered}" ?: "null"
         holder.textDied.text = "사망자 수 : ${covidList[position]?.death}" ?: "null"
         holder.textPercent.text = "발생률 : ${covidList[position]?.percentage}%" ?: "null"
         holder.textOverseas.text = "전일대비증감-해외유입 : ${covidList[position]?.newFCase}" ?: "null"
@@ -42,5 +42,14 @@ class CovidViewAdapter(var covidList: MutableList<CovidVO>) :
             var textPercent: TextView = itemView.findViewById(R.id.text_percent)
             var textOverseas: TextView = itemView.findViewById(R.id.text_overseas)
             var textArea: TextView = itemView.findViewById(R.id.text_area)
+
+//        var textCountry: TextView = bind.textCountry
+//        var textNewConfirm: TextView = bind.textNewConfirm
+//        var textConfirmCase: TextView = bind.textConfirmCase
+//        var textRecovered: TextView = bind.textRecovered
+//        var textDied: TextView = bind.textDied
+//        var textPercent: TextView = bind.textPercent
+//        var textOverseas: TextView = bind.textOverseas
+//        var textArea: TextView = bind.textArea
     }
 }
